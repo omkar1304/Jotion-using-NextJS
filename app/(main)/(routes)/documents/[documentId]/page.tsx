@@ -69,9 +69,11 @@ const Page = ({ params }: Props) => {
       <Cover url={document.coverImage} />
       <div className="md:max-w-3xl lg:max-w-4xl mx-auto ">
         <Toolbar initialData={document} />
-        {documents.map((singleDocument) => (
+       <div className="flex flex-col justify-between mb-4">
+       {documents.map((singleDocument) => (
           <SignleDocument initialData={singleDocument} key={singleDocument._id} />
         ))}
+       </div>
         <Editor onChange={onChange} initialContent={document.content} />
       </div>
     </div>

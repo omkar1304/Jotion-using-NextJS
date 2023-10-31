@@ -16,10 +16,10 @@ const SignleDocument = ({ initialData }: Props) => {
   return (
     <div className="flex flex-row justify-start pl-14 items-center mb-2">
       {initialData.icon ? (
-        <div className="shrink-0 mr-2 text-[25px]">{initialData.icon}</div>
+        <div className="shrink-0 mr-1 text-[20px]">{initialData.icon}</div>
       ) : (
         <div>
-          <FileIcon className="mr-1"/>
+          <FileIcon size={19} className="mr-1"/>
         </div>
       )}
       <p
