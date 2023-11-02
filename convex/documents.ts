@@ -336,6 +336,7 @@ export const getChildren = query({
       .withIndex("by_user_parent", (q) =>
         q.eq("userId", userId).eq("parentDocument", args.id)
       )
+      .filter((q) => q.eq(q.field("isArchived"), false))
       .collect();
 
     return documents;
